@@ -190,4 +190,3 @@ The five mandatory Q03 usability features implemented in this project are:
 
 ---
 
-*End of SRS — Review 1 Deliverable*
