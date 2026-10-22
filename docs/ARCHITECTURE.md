@@ -215,5 +215,3 @@ Hospital-TQM-Project/
 ```
 
 ---
-
-*End of Architecture Document — Review 1 Deliverable*

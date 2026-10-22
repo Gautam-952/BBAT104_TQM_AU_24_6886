@@ -280,5 +280,3 @@ The `db.py` module seeds the following realistic demo records on first run:
 | `bills`           | 5 bills (mixed Paid/Pending)           |
 
 ---
-
-*End of Database Design Document — Review 1 Deliverable*

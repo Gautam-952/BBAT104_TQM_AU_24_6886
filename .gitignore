@@ -20,6 +20,7 @@ database/hospital.db
 
 # IDE
 .vscode/
+.tests/
 .idea/
 *.swp
 *.swo
