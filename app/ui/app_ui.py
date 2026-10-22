@@ -52,7 +52,6 @@ class HospitalApp(tk.Tk):
         self._build_notebook()
         self._apply_theme()
 
-    # ─── Top Bar ───────────────────────────────────────────────────────────────
 
     def _build_topbar(self):
         T = self.tokens
@@ -92,7 +91,6 @@ class HospitalApp(tk.Tk):
                                   padx=10, pady=4)
         self.dark_btn.pack(side=tk.LEFT)
 
-    # ─── Notebook ──────────────────────────────────────────────────────────────
 
     def _build_notebook(self):
         self.style = ttk.Style(self)
@@ -120,7 +118,6 @@ class HospitalApp(tk.Tk):
         self.nb.add(frame, text=f"  {label}  ")
         return frame
 
-    # ─── Theme helpers ─────────────────────────────────────────────────────────
 
     def _apply_theme(self):
         T = self.tokens
@@ -224,7 +221,6 @@ class HospitalApp(tk.Tk):
         if hasattr(self, "_refresh_cal"):
             self._refresh_cal()
 
-    # ─── Reusable widgets ──────────────────────────────────────────────────────
 
     def _section_label(self, parent, text):
         T = self.tokens
@@ -287,7 +283,6 @@ class HospitalApp(tk.Tk):
         tree.pack(fill=tk.BOTH, expand=True)
         return tree
 
-    # ─── DASHBOARD ─────────────────────────────────────────────────────────────
 
     def _build_dashboard(self, parent):
         T = self.tokens
@@ -365,7 +360,6 @@ class HospitalApp(tk.Tk):
                      font=FONT_SMALL, bg=T["bg_card"], fg=T["text"],
                      anchor=tk.W, padx=8, pady=4).pack(fill=tk.X, pady=1)
 
-    # ─── PATIENTS ──────────────────────────────────────────────────────────────
 
     def _build_patients(self, parent):
         T = self.tokens
@@ -467,7 +461,6 @@ class HospitalApp(tk.Tk):
             except Exception as e:
                 messagebox.showerror("Error", str(e))
 
-    # ─── DOCTORS ───────────────────────────────────────────────────────────────
 
     def _build_doctors(self, parent):
         T = self.tokens
@@ -557,7 +550,6 @@ class HospitalApp(tk.Tk):
             except Exception as e:
                 messagebox.showerror("Error", str(e))
 
-    # ─── APPOINTMENTS ──────────────────────────────────────────────────────────
 
     def _build_appointments(self, parent):
         T = self.tokens
@@ -655,7 +647,6 @@ class HospitalApp(tk.Tk):
             except Exception as e:
                 messagebox.showerror("Error", str(e))
 
-    # ─── MEDICAL RECORDS ───────────────────────────────────────────────────────
 
     def _build_records(self, parent):
         T = self.tokens
@@ -721,7 +712,6 @@ class HospitalApp(tk.Tk):
             except Exception as e:
                 messagebox.showerror("Error", str(e))
 
-    # ─── BILLING ───────────────────────────────────────────────────────────────
 
     def _build_billing(self, parent):
         T = self.tokens
@@ -816,7 +806,6 @@ class HospitalApp(tk.Tk):
             except Exception as e:
                 messagebox.showerror("Error", str(e))
 
-    # ─── CALENDAR ──────────────────────────────────────────────────────────────
 
     def _build_calendar(self, parent):
         T = self.tokens
@@ -896,15 +885,10 @@ class HospitalApp(tk.Tk):
     def _refresh_cal(self):
         self._cal_day()
 
-    # ─── Utility ───────────────────────────────────────────────────────────────
 
     def _clear_entry(self, *entries):
         pass
 
-
-# ═══════════════════════════════════════════════════════════════════════════════
-# DIALOGS
-# ═══════════════════════════════════════════════════════════════════════════════
 
 class _BaseDialog(tk.Toplevel):
     def __init__(self, parent, title, tokens):

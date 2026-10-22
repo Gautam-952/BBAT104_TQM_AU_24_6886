@@ -145,16 +145,19 @@ def update_user(user_id: int, username: str = None,
         conn.close()
 
 
+_UNSET = object()
+
+
 def update_user_preferences(user_id: int, dark_mode: int = None,
                             theme_name: str = None,
-                            custom_colors_json: str = None) -> dict:
+                            custom_colors_json: str = _UNSET) -> dict:
     existing = get_user_preferences(user_id)
     if not existing:
         raise ValueError(f"No preferences found for user_id={user_id}.")
 
     new_dark   = dark_mode          if dark_mode is not None  else existing["dark_mode"]
     new_theme  = theme_name         if theme_name is not None else existing["theme_name"]
-    new_colors = custom_colors_json if custom_colors_json is not None else existing["custom_colors_json"]
+    new_colors = custom_colors_json if custom_colors_json is not _UNSET else existing["custom_colors_json"]
 
     conn = get_connection()
     try:

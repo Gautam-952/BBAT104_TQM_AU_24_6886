@@ -20,7 +20,6 @@ database/hospital.db
 
 # IDE
 .vscode/
-.tests/
 .idea/
 *.swp
 *.swo
@@ -31,6 +30,7 @@ Thumbs.db
 
 # Pytest
 .pytest_cache/
+tests/
 htmlcov/
 .coverage
 

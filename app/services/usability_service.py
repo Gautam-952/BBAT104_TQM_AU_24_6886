@@ -17,7 +17,6 @@ class UsabilityService:
     def __init__(self, user_id: int):
         self.user_id = user_id
 
-    # Q03.1 & Q03.2 — Theme
     def get_tokens(self) -> dict:
         return get_color_tokens(self.user_id)
 
@@ -39,11 +38,9 @@ class UsabilityService:
     def preview_theme(self, theme_name: str) -> dict:
         return get_theme_preview(theme_name)
 
-    # Q03.3 — Dashboard
     def dashboard(self) -> dict:
         return get_dashboard_stats()
 
-    # Q03.4 — Search Filters
     def search_patients(self, **kwargs) -> list[dict]:
         return filter_patients(**kwargs)
 
@@ -56,7 +53,6 @@ class UsabilityService:
     def search_bills(self, **kwargs) -> list[dict]:
         return filter_bills(**kwargs)
 
-    # Q03.5 — Calendar
     def day_view(self, target_date: str = None) -> dict:
         return get_daily_view(target_date)
 
